@@ -1,0 +1,6 @@
+class OverworldMap {
+  constructor(config) {
+    
+
+  }
+}
