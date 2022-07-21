@@ -8,6 +8,7 @@ class Overworld {
 
   startGameLoop() {
     const step = () => {
+      //Draw map
       this.map.drawMap(this.ctx);
       requestAnimationFrame(() => {
         step();
