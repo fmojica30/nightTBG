@@ -3,13 +3,21 @@ class Overworld {
     this.element = config.element;
     this.canvas = this.element.querySelector(".game-canvas");
     this.ctx = this.canvas.getContext("2d");
+    this.map = null;
+  }
+
+  startGameLoop() {
+    const step = () => {
+      this.map.drawMap(this.ctx);
+      requestAnimationFrame(() => {
+        step();
+      });
+    }
+    step();
   }
 
   init() {
-    const image = new Image();
-    image.onload = () => {
-      this.ctx.drawImage(image, 0,0);
-    }
-    image.src = "/assets/maps/Battlefield.png";
+    this.map = new OverworldMap(window.OverworldMaps.battlefield);
+    this.startGameLoop();
   }
 }
