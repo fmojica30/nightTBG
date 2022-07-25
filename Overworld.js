@@ -10,10 +10,15 @@ class Overworld {
     const step = () => {
       //Draw map
       this.map.drawMap(this.ctx);
+
+      //Drawing objects
+      Object.values(this.map.gameObjects).forEach((object) => {
+        object.sprite.draw(this.ctx);
+      });
       requestAnimationFrame(() => {
         step();
       });
-    }
+    };
     step();
   }
 
