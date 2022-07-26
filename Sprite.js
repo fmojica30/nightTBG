@@ -81,7 +81,7 @@ class Sprite {
 
   draw(ctx) {
     //Customizations work for 32x32 sprite sheet
-    const x = this.gameObject.x - this.adjustX;
+    const x = this.gameObject.x + this.adjustX;
     const y = this.gameObject.y + this.adjustY;
 
     const [frameX, frameY] = this.frame;
