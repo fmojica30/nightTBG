@@ -8,8 +8,15 @@ class Overworld {
 
   startGameLoop() {
     const step = () => {
+      //Clearing the canvas for new images
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
       //Draw map
       this.map.drawMap(this.ctx);
+
+      //Update objects
+      Object.values(this.map.gameObjects).forEach((object) => {
+        object.sprite.update();
+      })
 
       //Drawing objects
       Object.values(this.map.gameObjects).forEach((object) => {

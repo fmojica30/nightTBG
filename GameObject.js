@@ -9,7 +9,12 @@ class GameObject {
     this.y = config.y || 0;
     this.sprite = new Sprite({
       gameObject: this,
-      imageSrc: config.imageSrc || "assets/characters/heros/knightM/knight_m_idle_anim_f0.png"
+      imageSrc: config.imageSrc || "assets/characters/heros/knightM/knightM.png",
+      adjustX: config.adjustX || 0,
+      adjustY: config.adjustY || 0,
     });
+
   }
+
+  
 }
