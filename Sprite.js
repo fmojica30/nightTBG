@@ -22,23 +22,8 @@ class Sprite {
     this.animationFrameLimit = config.animationFrameLimit || 3;
     this.animationFrameProgress = this.animationFrameLimit;
 
-    //Slow down animation
-    //Todo: Make an animation counter so all animation happen at different times
-    /*
-      ex:
-      this.animateCounter = 0;
-      this.animateNow = 3;
-  
-      update() {
-        if (this.animateCounter === this.animateNow) {
-          this.updateAnimationProgress();
-          this.animateCounter = 0;
-        } else {
-          this.animateCounter += 1;
-        }
-      }
-    */
-    this.animateNow = true;
+    this.frameCounter = 0;
+    this.animateNow = config.animateNow;
   }
 
   get frame() {
@@ -70,13 +55,12 @@ class Sprite {
   }
 
   update() {
-    if (this.animateNow) {
+    if (this.frameCounter === this.animateNow) {
       this.updateAnimationProgress();
-      this.animateNow = false;
+      this.frameCounter = 0;
     } else {
-      this.animateNow = true;
+      this.frameCounter += 1;
     }
-    
   }
 
   draw(ctx) {
