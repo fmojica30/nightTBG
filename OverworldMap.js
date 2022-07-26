@@ -20,6 +20,20 @@ window.OverworldMaps = {
         adjustX: 8,
         adjustY: 4
       }),
+      hero1: new GameObject({
+        x: utils.withGrid(8),
+        y: utils.withGrid(2),
+        adjustX: 8,
+        adjustY: 0,
+        imageSrc: "assets/characters/heros/bandit/banditIdle.png"
+      }),
+      hero2: new GameObject({
+        x: utils.withGrid(8),
+        y: utils.withGrid(4),
+        adjustX: 8,
+        adjustY: 0,
+        imageSrc: "assets/characters/heros/bishop/bishop.png"
+      }),
     }
   },
 }
