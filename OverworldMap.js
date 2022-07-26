@@ -35,10 +35,10 @@ window.OverworldMaps = {
         imageSrc: "assets/characters/heros/bishop/bishop.png"
       }),
       demon: new GameObject({
-        x: utils.withGrid(2),
-        y: utils.withGrid(3),
-        adjustX: -16,
-        adjustY: 0,
+        x: utils.withGrid(11),
+        y: utils.withGrid(4),
+        adjustX: -8,
+        adjustY: 8,
         imageSrc: "assets/characters/monsters/bigDemon/bigDemonIdle.png",
         animateNow: 3
       }),
