@@ -12,7 +12,8 @@ class GameObject {
       imageSrc: config.imageSrc || "assets/characters/heros/knightM/knightM.png",
       adjustX: config.adjustX || 0,
       adjustY: config.adjustY || 0,
-      animateNow: config.animateNow || 1
+      animateNow: config.animateNow || 1,
+      currentAnimation: config.currentAnimation || "idle"
     });
 
   }
