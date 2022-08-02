@@ -43,6 +43,13 @@ window.OverworldMaps = {
         imageSrc: "assets/characters/monsters/bigDemon/bigDemonIdle.png",
         animateNow: 3
       }),
+      die1: new Dice({
+
+      }),
+      die2: new Dice({
+        x: utils.withGrid(1),
+        y: utils.withGrid(0),
+      }),
     }
   },
 }
