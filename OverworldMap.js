@@ -18,7 +18,8 @@ window.OverworldMaps = {
         x: utils.withGrid(5),
         y: utils.withGrid(4),
         adjustX: -8,
-        adjustY: 4
+        adjustY: 0,
+        currentAnimation: "selected"
       }),
       hero1: new GameObject({
         x: utils.withGrid(8),
