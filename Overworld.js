@@ -31,6 +31,8 @@ class Overworld {
 
   init() {
     this.map = new OverworldMap(window.OverworldMaps.battlefield);
+    this.canvasListener = new CanvasListener();
+    this.canvasListener.init();
     this.startGameLoop();
   }
 }

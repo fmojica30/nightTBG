@@ -17,7 +17,6 @@ class Player {
       slot2: null
     };
     this.capturedMonsters = config.capturedMonsters || {
-
       slot1: null,
       slot2: null,
       slot3: null
@@ -30,6 +29,10 @@ class Player {
 
   beginTurn() {
     this.isTurn = true;
+  }
+
+  endTurn() {
+    this.isTurn = false;
   }
 
   useActionPoint(action) {
