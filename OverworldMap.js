@@ -52,6 +52,11 @@ window.OverworldMaps = {
         y: utils.withGrid(.5),
         imageSrc: "assets/dice/die-two.png",
       }),
+      die3: new Die({
+        x: utils.withGrid(0),
+        y: utils.withGrid(.5),
+        imageSrc: "assets/dice/dieSheet.png",
+      }),
     }
   },
 }

@@ -16,6 +16,7 @@ class Sprite {
     this.animations = config.animation || {
       "idle": [[0,0], [1,0], [2,0], [3,0]],
       "selected": [[0,1], [1,1], [2,1], [3,1]],
+      "die":[[0,0]],
     }
 
     this.currentAnimation = config.currentAnimation || "idle";
@@ -70,6 +71,10 @@ class Sprite {
     const y = this.gameObject.y + this.adjustY;
 
     const [frameX, frameY] = this.frame;
-    this.isLoaded && ctx.drawImage(this.image, frameX * 32, frameY * 32, 32, 32, x, y, 32, 32 );
-  }
+    if(this.animations == "die"){
+      // Need to fix the image displayed on screen
+    this.isLoaded && ctx.drawImage(this.image, 16, 16, 16, 16, 16, 16, 16, 16);
+    }else{
+    this.isLoaded && ctx.drawImage(this.image, frameX * 32, frameY * 32, 32, 32, x, y, 32, 32);
+    }}
 }

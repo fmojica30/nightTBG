@@ -2,7 +2,6 @@ class Dice extends GameObject {
     constructor(config){
         super(config);
         this.currentNumber = 1;
-        this.sprite.imageSrc = 'assets/dice/die-six.png';
     }
 
     rollDie (){
