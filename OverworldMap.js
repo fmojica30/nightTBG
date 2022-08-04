@@ -3,6 +3,15 @@ class OverworldMap {
     this.mapImg = new Image();
     this.mapImg.src = config.mapSrc;
     this.gameObjects = config.gameObjects;
+    this.player1boardLocations = {
+      partyLeader: {
+        xMin: utils.withGridScaled(5),
+        xMax: utils.withGridScaled(6),
+        yMin: utils.withGridScaled(5),
+        yMax: utils.withGridScaled(6)
+      }
+
+    }
   }
 
   drawMap(ctx) {
