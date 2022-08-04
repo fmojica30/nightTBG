@@ -44,11 +44,13 @@ window.OverworldMaps = {
         animateNow: 3
       }),
       die1: new Dice({
-
+        x: utils.withGrid(7),
+        y: utils.withGrid(.5),
       }),
       die2: new Dice({
-        x: utils.withGrid(1),
-        y: utils.withGrid(0),
+        x: utils.withGrid(8.5),
+        y: utils.withGrid(.5),
+        imageSrc: "assets/dice/die-two.png",
       }),
     }
   },
