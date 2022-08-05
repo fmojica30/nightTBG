@@ -14,7 +14,7 @@ class Overworld {
       //Draw map
       this.map.drawMap(this.ctx);
       
-      console.log(this.canvasListener.selectedSpot);
+      console.log(this.canvasListener.spot);
       //Update objects
       Object.values(this.map.gameObjects).forEach((object) => {
         object.sprite.update();

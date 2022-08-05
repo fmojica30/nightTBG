@@ -91,7 +91,7 @@ class Player {
       // if no change was made stays false to signify a full object
       let changed = false;
       for (const slot in attributeToChange) {
-        if (!attributeToChange[slot] && !change) {
+        if (!attributeToChange[slot] && !changed) {
           attributeToChange[slot] = go;
           changed = true;
         }
