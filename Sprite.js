@@ -71,9 +71,8 @@ class Sprite {
     const y = this.gameObject.y + this.adjustY;
 
     const [frameX, frameY] = this.frame;
-    if(this.animations == "die"){
-      // Need to fix the image displayed on screen
-    this.isLoaded && ctx.drawImage(this.image, 16, 16, 16, 16, 16, 16, 16, 16);
+    if(this.currentAnimation === "die"){
+    this.isLoaded && ctx.drawImage(this.image, frameX * 16, frameY * 16, 16, 16, x, y, 16, 16);
     }else{
     this.isLoaded && ctx.drawImage(this.image, frameX * 32, frameY * 32, 32, 32, x, y, 32, 32);
     }}

@@ -2,8 +2,6 @@ class Die {
     constructor(config){
         this.id = 'die';
 
-        this.playerId = null;
-        this.isMounted = false;
         this.currentNumber = 6;
         this.x = config.x || 0;
         this.y = config.y || 0;
@@ -15,7 +13,6 @@ class Die {
             animateNow: config.animateNow || 1,
             currentAnimation: config.currentAnimation || "die",
           });
-        console.log(this.currentNumber);
     }
 
     /* Updates the face value on screen 
