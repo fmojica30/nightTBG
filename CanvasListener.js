@@ -1,16 +1,14 @@
 class CanvasListener {
-  constructor(config) {
-    this.selectedSpot = null;
-    this.map = config.map;
+  constructor() {
+    this.selectedSpot = [];
   }
 
   init() {
     var canvas = document.getElementById("gameContainer");
-    canvas.addEventListener("click", function (event) {
+    canvas.addEventListener("click", (event) => {
       const rect = canvas.getBoundingClientRect();
       var xVal = event.clientX - rect.left;
       var yVal = event.clientY - rect.top;
-      console.log(xVal, yVal);
 
       if (
         xVal > utils.withGridScaled(5) &&
@@ -18,16 +16,12 @@ class CanvasListener {
         yVal > utils.withGridScaled(5) &&
         yVal < utils.withGridScaled(6)
       ) {
-        console.log("Party Leader");
+        this.selectedSpot = "partyLeader";
       }
     });
   }
 
-  get selectedSpot() {
+  get spot() {
     return this.selectedSpot;
-  }
-
-  set selectedSpot(arg) {
-    this.selectedSport = arg;
   }
 }

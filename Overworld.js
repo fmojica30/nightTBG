@@ -14,7 +14,7 @@ class Overworld {
       //Draw map
       this.map.drawMap(this.ctx);
       
-
+      console.log(this.canvasListener.selectedSpot);
       //Update objects
       Object.values(this.map.gameObjects).forEach((object) => {
         object.sprite.update();
@@ -33,8 +33,9 @@ class Overworld {
 
   init() {
     this.map = new OverworldMap(window.OverworldMaps.battlefield);
-    this.canvasListener = new CanvasListener(window.OverworldMaps.battlefield);
+    this.canvasListener = new CanvasListener();
     this.canvasListener.init();
+    this.canvasListener.spot; 
     this.startGameLoop();
   }
 }
