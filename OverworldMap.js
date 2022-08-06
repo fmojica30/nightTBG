@@ -43,19 +43,14 @@ window.OverworldMaps = {
         imageSrc: "assets/characters/monsters/bigDemon/bigDemonIdle.png",
         animateNow: 3
       }),
-      die1: new Dice({
-        x: utils.withGrid(7),
+      die1: new Die({
+        x: utils.withGrid(7.75),
         y: utils.withGrid(.5),
+        currentNumber: 2,
       }),
-      die2: new Dice({
-        x: utils.withGrid(8.5),
+      die2 : new Die({
+        x: utils.withGrid(9),
         y: utils.withGrid(.5),
-        imageSrc: "assets/dice/die-two.png",
-      }),
-      die3: new Die({
-        x: utils.withGrid(0),
-        y: utils.withGrid(.5),
-        imageSrc: "assets/dice/dieSheet.png",
       }),
     }
   },

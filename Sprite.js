@@ -26,11 +26,18 @@ class Sprite {
 				[2, 1],
 				[3, 1],
 			],
-			die: [[0, 0]],
+			die: [
+				[0, 0],
+				[1, 0],
+				[2, 0],
+				[3, 0],
+				[4, 0],
+				[5, 0],
+			],
 		};
 
 		this.currentAnimation = config.currentAnimation || 'idle';
-		this.currentAnimationFrame = 0;
+		this.currentAnimationFrame = config.currentAnimationFrame || 0;
 		this.animationFrameLimit = config.animationFrameLimit || 3;
 		this.animationFrameProgress = this.animationFrameLimit;
 
